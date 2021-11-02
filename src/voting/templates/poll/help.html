@@ -1,0 +1,20 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <!-- <h2>Hi, {{request.user.get_full_name}} - {{request.user.username}}</h2>
+  <h3><a href="{% url 'position' %}"><button id="btnSearch" class="btn btn-primary btn-md center-block" Style="width: 100px;" OnClick="btnSearch_Click" >VOTE</button></a></h3>
+  <h3><a href="{% url 'result' %}">Click Here To See Result</a></h3> -->
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h4><span class="badge badge-warning text-wrap mb-3">Help</span></h4>
+      <p>To cast your vote for the University of Limpopo 2021 Student Representative Council elections you need to register an account with your details, then login to cast your vote, you will b asked to authenticate yourself,
+        after the system has verified that you are a student that is when you can choose what to vote for, then after you have voted you will receive a vote success message. Then you can logout, then you can login again to view the results.
+      </p>
+
+         <!-- <button id="btnClear" class="btn btn-danger btn-md center-block" Style="width: 100px;" OnClick="btnClear_Click" >button</button> -->
+    </div>
+</div>
+{% endblock %}

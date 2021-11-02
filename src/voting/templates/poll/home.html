@@ -1,0 +1,35 @@
+{% extends "poll/base.html" %}
+
+{% block title %}Online Voting System{% endblock %}
+
+{% block content %}
+<!-- <div class="jumbotron">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+  {% endif %}
+  <h1>Welcome to Online Voting System</h1>
+  <h3>This is a simple voting application for small organization.</h3>
+</div> -->
+<div class="container text-center">
+  <p>Welcome to the UNIVERSITY OF LIMPOPO Electronic Student Representative Council Election system.</p>
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-success" role="alert">
+      {{ message }}
+    </div>
+    {% endfor %}
+  {% endif %}
+<hr class="mb-4">
+<div class="text-center">
+{% if request.user.is_authenticated %}
+<a class="nav-item nav-link" href="{% url 'dashboard' %}"><button type="submit" class="btn btn-primary btn-md ">VOTE</button></a>
+{% else %}
+<a class="nav-item nav-link" href="{% url 'login' %}"><button type="submit" class="btn btn-primary btn-md ">LOGIN</button></a>
+{% endif %}
+</div
+
+{% endblock %}
